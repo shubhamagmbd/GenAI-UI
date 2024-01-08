@@ -10,10 +10,10 @@ api_base = 'https://rcgth-hackathon-aoai-eu2.openai.azure.com/'  # Enter your en
 api_key = 'c7a1c79eb07d4ff380f09938640f774c'        # Enter your API key here
 
 api_version = '2023-12-01-preview'
-
+"""
 app = Flask(__name__)
 
-"""
+
 @app.route('/')
 def index():
    print('Request for index page received')
@@ -35,11 +35,7 @@ def hello():
        print('Request for hello page received with no name or blank name -- redirecting')
        return redirect(url_for('index'))
   """   
-@app.route('/')
-def index():
-   print('Request for index page received')
-   render_template('index.html')
-  
+
 def image_gen():
     api_base = 'https://rcgth-hackathon-aoai-eu2.openai.azure.com/'  # Enter your endpoint here
     api_key = 'c7a1c79eb07d4ff380f09938640f774c'        # Enter your API key here
@@ -60,5 +56,5 @@ def image_gen():
     
     return image_url
 
-if __name__ == '__main__':
-   app.run()
+#if __name__ == '__main__':
+#   app.run()
