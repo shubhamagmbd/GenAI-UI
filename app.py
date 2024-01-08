@@ -13,7 +13,7 @@ api_version = '2023-12-01-preview'
 
 app = Flask(__name__)
 
-
+"""
 @app.route('/')
 def index():
    print('Request for index page received')
@@ -34,7 +34,7 @@ def hello():
    else:
        print('Request for hello page received with no name or blank name -- redirecting')
        return redirect(url_for('index'))
-       
+  """     
 def image_gen():
     url = f"{api_base}/openai/deployments/<dalle3>/images/generations?api-version={api_version}"
     headers= { "api-key": api_key, "Content-Type": "application/json" }
