@@ -34,8 +34,16 @@ def hello():
    else:
        print('Request for hello page received with no name or blank name -- redirecting')
        return redirect(url_for('index'))
-  """     
+  """   
+@app.route('/')
+def index():
+   print('Request for index page received')
+   render_template('index.html')
+  
 def image_gen():
+    api_base = 'https://rcgth-hackathon-aoai-eu2.openai.azure.com/'  # Enter your endpoint here
+    api_key = 'c7a1c79eb07d4ff380f09938640f774c'        # Enter your API key here
+    api_version = '2023-12-01-preview'
     url = f"{api_base}/openai/deployments/<dalle3>/images/generations?api-version={api_version}"
     headers= { "api-key": api_key, "Content-Type": "application/json" }
     body = {
@@ -50,7 +58,7 @@ def image_gen():
     
     image_url = submission.json()['data'][0]['url']
     
-    print(image_url)
+    return image_url
 
 if __name__ == '__main__':
    app.run()
