@@ -8,11 +8,6 @@ from flask import (Flask, redirect, render_template, request,
                    send_from_directory, url_for)
 api_base = 'https://rcgth-hackathon-aoai-eu2.openai.azure.com/'  # Enter your endpoint here
 api_key = 'c7a1c79eb07d4ff380f09938640f774c'        # Enter your API key here
-
-api_version = '2023-12-01-preview'
-
-api_base = 'https://rcgth-hackathon-aoai-eu2.openai.azure.com/'  # Enter your endpoint here
-api_key = 'c7a1c79eb07d4ff380f09938640f774c'        # Enter your API key here
 api_version = '2023-12-01-preview'
 url = f"{api_base}/openai/deployments/<dalle3>/images/generations?api-version={api_version}"
 headers= { "api-key": api_key, "Content-Type": "application/json" }
