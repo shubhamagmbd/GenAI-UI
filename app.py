@@ -1,4 +1,8 @@
 import os
+from openai import AzureOpenAI
+import requests
+from PIL import Image
+import json
 
 from flask import (Flask, redirect, render_template, request,
                    send_from_directory, url_for)
