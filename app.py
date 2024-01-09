@@ -1,9 +1,7 @@
 import os
 
-from langchain_openai import OpenAI
 from flask import (Flask, redirect, render_template, request,
                    send_from_directory, url_for)
-os.environ["OPENAI_API_KEY"] = "c7a1c79eb07d4ff380f09938640f774c"
 app = Flask(__name__)
 
 
