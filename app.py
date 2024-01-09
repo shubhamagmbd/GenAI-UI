@@ -17,6 +17,7 @@ def index():
 def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
+"""
 @app.route()
 def gen_img():
   client = AzureOpenAI(
@@ -51,7 +52,7 @@ def gen_img():
   image = Image.open(image_path)
   image.show()
 
-"""
+
 @app.route('/')
 def index():
    print('Request for index page received')
